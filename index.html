@@ -1,7 +1,60 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="utf-8">
+  <title>Yonathan Setiawan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://assets-global.website-files.com/641a0c8100e68df2708b96bf/css/dashdarktemplate.webflow.b5a715012.css" rel="stylesheet" type="text/css">
+  <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
 <body>
-<h1>YONATHAN SETIAWAN</h1>
-<p color="red">michelle cantik</p>
+  <div class="page-wrapper">
+    <div role="banner" class="sidebar-wrapper" id="sidebar">
+        <button id="closeSidebar" class="back-arrow-button" aria-label="Close Sidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M15 8a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708.708L2.707 7.5H14.5a.5.5 0 0 1 .5.5z"/>
+            </svg>
+          </button>
+      <div class="overflow-hidden">
+        <div class="sidebar-logo-section-container">
+        </div>
+        <div class="sidebar-collapsed-divider"></div>
+        <nav role="navigation" class="sidebar-menu-container">
+          <div class="sidebar-menu-collapsed-overlay"></div>
+          <a href="/about" class="sidebar-dropdown-link">About Me</a>
+          <a href="/portfolio" class="sidebar-dropdown-link">Portfolio</a>
+          <a href="/blog" class="sidebar-dropdown-link">Blog</a>
+          <a href="/contact" class="sidebar-dropdown-link">Contact</a>
+        </nav>
+      </div>
+    </div>
+    <div class="dashboard-main-section">
+      <div class="dashboard-content">
+        <div class="dashboard-main-content">
+          <div class="container-default">
+            <div class="text-center">
+              <h1>Welcome to Yonathan Setiawan's Website</h1>
+              <p>Explore my work, thoughts, and professional journey.</p>
+              <a href="/about" class="btn-primary large">Learn More About Me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="openSidebar" class="open-arrow-button" aria-label="Open Sidebar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M.5 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L12.293 8.5H1A.5.5 0 0 1 .5 8z"/>
+        </svg>
+    </button>
+    <div class="dashboard-footer-wrapper">
+      <div class="container-default">
+        <div class="text-200 medium">
+          Copyright © Yonathan Setiawan | All Rights Reserved
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
