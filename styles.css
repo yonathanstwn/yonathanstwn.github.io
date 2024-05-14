@@ -1,61 +1,14 @@
-.dashboard-main-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
-  
-  .container-default {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .sidebar-wrapper {
-    position: fixed;
-    left: 0;
-    width: 250px;
-    height: 100vh;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    transform: translateX(-100%);
-  }
-  
-  .collapsed {
-    width: 0;
-    overflow: hidden; 
-  }
-  
-  .back-arrow-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-  }
-  
-  .open-arrow-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    cursor: pointer;
-  }
-  
-  .sidebar-wrapper.open {
-    transform: translateX(0);
-  }
-  
-  .back-arrow-button, .open-arrow-button {
-    position: absolute;
-    top: 10px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    outline: none;
-  }
-  
-  .back-arrow-button svg, .open-arrow-button svg {
-    fill: #fff;
-    width: 24px;
-    height: 24px;
-  }
-  
+body {
+    background-color: #000;
+    color: white;
+    font-weight: 400;
+    font-family: "Inter"
+}
+
+nav {
+    background-color: #000;
+}
+
+hr {
+    border-color: #333;
+}
