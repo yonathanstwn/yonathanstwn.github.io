@@ -1,116 +1,544 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yonathan Setiawan</title>
-  <link rel="icon" href="https://tailwindui.com/img/logos/mark.svg?color=white">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Yonathan Setiawan — Quant Developer & TPM</title>
+  <meta name="description" content="Technical Project Manager & Quant Developer at Millennium. Building AI systems, trading infrastructure, and data platforms.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='8' fill='%230EA5E9'/><text x='20' y='29' font-family='Arial' font-weight='900' font-size='24' text-anchor='middle' fill='white'>Y</text></svg>">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <div id="page-wrapper" class="flex flex-col h-screen">
-    <nav>
-      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div class="relative flex h-16 items-center justify-between">
-          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <!-- Mobile menu button-->
-            <button type="button"
-              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              aria-controls="mobile-menu" aria-expanded="false">
-              <span class="absolute -inset-0.5"></span>
-              <span class="sr-only">Open main menu</span>
-              <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-              <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div class="flex flex-shrink-0 items-center">
-              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=white"
-                alt="Your Company">
-            </div>
-            <div class="hidden sm:ml-6 sm:block">
-              <div class="flex space-x-4 nav-links">
-                <a href="#"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Freelancing</a>
-                <a href="#"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Tutoring</a>
-                <a href="#"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
-              </div>
-            </div>
-          </div>
-          <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            <button type="button"
-              class="relative rounded-full p-1 text-white hover:bg-gray-700 focus:bg-gray-800">
-              <span class="absolute -inset-1.5"></span>
-              <span class="sr-only">View notifications</span>
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
-              </svg>
-            </button>
-            <div class="relative ml-3">
-              <div>
-                <button type="button"
-                  class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                  id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                  <span class="absolute -inset-1.5"></span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="sm:active hidden" id="mobile-menu">
-        <div class="space-y-1 px-2 pb-3 pt-2">
-          <a href="#"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Freelancing</a>
-          <a href="#"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Tutoring</a>
-          <a href="#"
-            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
-        </div>
-      </div>
-    </nav>
-    <hr>
 
-    <!-- Main Content -->
-    <div class="flex-1 flex flex-col">
-      <div class="flex-1 flex items-center justify-center">
-        <div class="text-center">
-          <h1 class="text-7xl mb-4">Yonathan Setiawan</h1>
-          <br>
-          <a href="https://uk.linkedin.com/in/yonathanstwn"
-            class="bg-white text-black py-2 px-4 rounded hover:bg-black border-2 hover:text-white hover:border-solid hover:border-white transition duration-200">Learn More
-            About Me</a>
+  <!-- Scroll Progress Bar -->
+  <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Konami Easter Egg Overlay -->
+  <div id="konamiOverlay" class="konami-overlay" aria-hidden="true">
+    <div class="konami-box">
+      <pre class="konami-art">
+ ██╗   ██╗███████╗
+ ╚██╗ ██╔╝██╔════╝
+  ╚████╔╝ ███████╗
+   ╚██╔╝  ╚════██║
+    ██║   ███████║
+    ╚═╝   ╚══════╝</pre>
+      <p class="konami-msg">CHEAT CODE ACTIVATED 🎮<br>
+      <span>You clearly have exceptional taste.</span></p>
+      <button class="konami-close" id="konamiClose">Continue →</button>
+    </div>
+    <canvas id="konamiCanvas" class="konami-canvas"></canvas>
+  </div>
+
+  <!-- Ticker Tape -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-content">
+      <span class="ticker-item">Python <span class="tsep">◆</span></span>
+      <span class="ticker-item">C++ <span class="tsep">◆</span></span>
+      <span class="ticker-item">Java <span class="tsep">◆</span></span>
+      <span class="ticker-item">kdb+/q <span class="tsep">◆</span></span>
+      <span class="ticker-item">TypeScript <span class="tsep">◆</span></span>
+      <span class="ticker-item">React <span class="tsep">◆</span></span>
+      <span class="ticker-item">FastAPI <span class="tsep">◆</span></span>
+      <span class="ticker-item">AWS EKS <span class="tsep">◆</span></span>
+      <span class="ticker-item">Kubernetes <span class="tsep">◆</span></span>
+      <span class="ticker-item">Fixed Income <span class="tsep">◆</span></span>
+      <span class="ticker-item">RAG Pipelines <span class="tsep">◆</span></span>
+      <span class="ticker-item">VectorDB <span class="tsep">◆</span></span>
+      <span class="ticker-item">Bloomberg API <span class="tsep">◆</span></span>
+      <span class="ticker-item">MCP Servers <span class="tsep">◆</span></span>
+      <span class="ticker-item">PyTorch <span class="tsep">◆</span></span>
+      <span class="ticker-item">Terraform <span class="tsep">◆</span></span>
+      <span class="ticker-item">LangChain <span class="tsep">◆</span></span>
+      <span class="ticker-item">Quant Finance <span class="tsep">◆</span></span>
+      <!-- duplicate for seamless loop -->
+      <span class="ticker-item">Python <span class="tsep">◆</span></span>
+      <span class="ticker-item">C++ <span class="tsep">◆</span></span>
+      <span class="ticker-item">Java <span class="tsep">◆</span></span>
+      <span class="ticker-item">kdb+/q <span class="tsep">◆</span></span>
+      <span class="ticker-item">TypeScript <span class="tsep">◆</span></span>
+      <span class="ticker-item">React <span class="tsep">◆</span></span>
+      <span class="ticker-item">FastAPI <span class="tsep">◆</span></span>
+      <span class="ticker-item">AWS EKS <span class="tsep">◆</span></span>
+      <span class="ticker-item">Kubernetes <span class="tsep">◆</span></span>
+      <span class="ticker-item">Fixed Income <span class="tsep">◆</span></span>
+      <span class="ticker-item">RAG Pipelines <span class="tsep">◆</span></span>
+      <span class="ticker-item">VectorDB <span class="tsep">◆</span></span>
+      <span class="ticker-item">Bloomberg API <span class="tsep">◆</span></span>
+      <span class="ticker-item">MCP Servers <span class="tsep">◆</span></span>
+      <span class="ticker-item">PyTorch <span class="tsep">◆</span></span>
+      <span class="ticker-item">Terraform <span class="tsep">◆</span></span>
+      <span class="ticker-item">LangChain <span class="tsep">◆</span></span>
+      <span class="ticker-item">Quant Finance <span class="tsep">◆</span></span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">YS</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#terminal-section">Terminal</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </div>
+    <div class="mobile-nav hidden" id="mobileNav">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#experience" class="mobile-link">Experience</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#terminal-section" class="mobile-link">Terminal</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────────────────── -->
+  <section id="hero">
+    <canvas id="heroCanvas" aria-hidden="true"></canvas>
+
+    <!-- Floating market widget (desktop) -->
+    <div class="market-widget" id="marketWidget" aria-label="Live market data (demo)">
+      <div class="market-header">
+        <span class="market-label">MARKETS</span>
+        <span class="market-demo">DEMO</span>
+      </div>
+      <div class="market-rows" id="marketRows"></div>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-badge" data-reveal="scale">
+        <span class="pulse-dot"></span>
+        Currently @ Millennium &middot; Singapore
+      </div>
+
+      <h1 class="hero-name" data-reveal="up">
+        Yonathan<br>Setiawan
+      </h1>
+
+      <p class="hero-subtitle" data-reveal="up">
+        <span class="hero-static">I build </span><span id="typewriterText" class="hero-dynamic"></span><span class="tw-cursor">|</span>
+      </p>
+
+      <div class="hero-tags" data-reveal="up">
+        <span class="htag">Fixed Income</span>
+        <span class="htag">Commodities</span>
+        <span class="htag">AI Systems</span>
+      </div>
+
+      <div class="hero-ctas" data-reveal="up">
+        <a href="#contact" class="btn-primary">Get In Touch</a>
+        <a href="https://uk.linkedin.com/in/yonathanstwn" class="btn-outline" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ── STATS ─────────────────────────────────────── -->
+  <div class="stats-strip">
+    <div class="stat" data-reveal="up">
+      <div class="stat-val"><span class="count" data-target="4">0</span><span>+</span></div>
+      <div class="stat-lbl">Yrs Experience</div>
+    </div>
+    <div class="stat" data-reveal="up">
+      <div class="stat-val"><span class="count" data-target="2">0</span></div>
+      <div class="stat-lbl">Tier-1 Firms</div>
+    </div>
+    <div class="stat" data-reveal="up">
+      <div class="stat-val"><span class="count" data-target="81">0</span><span>%</span></div>
+      <div class="stat-lbl">Honours Grade</div>
+    </div>
+    <div class="stat" data-reveal="up">
+      <div class="stat-val"><span class="count" data-target="50">0</span><span>+</span></div>
+      <div class="stat-lbl">PMs Served</div>
+    </div>
+  </div>
+
+  <!-- ── ABOUT ─────────────────────────────────────── -->
+  <section id="about" class="section">
+    <div class="section-label" data-reveal="left">/ About</div>
+    <h2 class="section-title" data-reveal="up">Who I Am</h2>
+
+    <div class="about-grid">
+      <div class="about-text-col">
+        <p class="about-p" data-reveal="up">
+          Quantitative developer and technical project manager building systematic trading infrastructure, AI platforms, and real-time data systems at Millennium and JPMorgan Chase.
+        </p>
+        <p class="about-p" data-reveal="up">
+          I bridge cutting-edge technology with financial markets — architecting enterprise AI systems, backtesting frameworks, and trading platforms used by 50+ portfolio managers across APAC, EMEA, and the Americas.
+        </p>
+        <p class="about-p" data-reveal="up">
+          Originally from Bali. CS First Class from King's College London. Currently building the future of quantitative finance in Singapore.
+        </p>
+      </div>
+
+      <!-- Neofetch-style system card -->
+      <div class="neo-card" data-reveal="right">
+        <div class="neo-titlebar">
+          <span class="neo-dot" style="background:#EF4444"></span>
+          <span class="neo-dot" style="background:#F59E0B"></span>
+          <span class="neo-dot" style="background:#10B981"></span>
+          <span class="neo-title">yonathan@portfolio ~</span>
+        </div>
+        <div class="neo-body">
+          <div class="neo-row"><span class="neo-k">name</span><span class="neo-v">Yonathan Setiawan</span></div>
+          <div class="neo-row"><span class="neo-k">alias</span><span class="neo-v">yonathanstwn</span></div>
+          <div class="neo-row"><span class="neo-k">role</span><span class="neo-v">TPM &amp; Quant Developer</span></div>
+          <div class="neo-row"><span class="neo-k">company</span><span class="neo-v">Millennium Mgmt</span></div>
+          <div class="neo-row"><span class="neo-k">location</span><span class="neo-v">Singapore 🇸🇬</span></div>
+          <div class="neo-row"><span class="neo-k">shell</span><span class="neo-v">zsh + python3.12</span></div>
+          <div class="neo-row"><span class="neo-k">uptime</span><span class="neo-v">4+ yrs in finance</span></div>
+          <div class="neo-row"><span class="neo-k">status</span><span class="neo-v neo-green">● OPEN TO FREELANCE</span></div>
         </div>
       </div>
     </div>
-    <hr>
-    <!-- Footer -->
-    <footer class="py-4 text-center text-xs">
-      <div class="container mx-auto">
-        <p>Copyright © Yonathan Setiawan | All Rights Reserved</p>
+  </section>
+
+  <!-- ── EXPERIENCE ─────────────────────────────────── -->
+  <section id="experience" class="section">
+    <div class="section-label" data-reveal="left">/ Experience</div>
+    <h2 class="section-title" data-reveal="up">Career</h2>
+
+    <div class="timeline stagger">
+
+      <div class="tl-item" data-reveal="up">
+        <div class="tl-dot active"></div>
+        <div class="tl-card tilt-card">
+          <div class="tl-head">
+            <div>
+              <div class="tl-title">Technical Project Manager</div>
+              <div class="tl-co">Millennium &middot; APAC Fixed Income &amp; Commodities</div>
+            </div>
+            <div class="tl-meta">
+              <div class="tl-date">Feb 2026 – Present</div>
+              <div class="tl-loc">Singapore</div>
+            </div>
+          </div>
+          <ul class="tl-bullets">
+            <li>APAC TPM Lead across 11 PM pods (50+ PMs/traders) — Fixed Income and Commodities</li>
+            <li>Architect enterprise AI: MCP servers, RAG + vector databases, agentic coding pipelines, memory-augmented AI</li>
+            <li>Build microservices and backtesting frameworks with PCA factor models for systematic strategies</li>
+            <li>Automate research report compilation and sentiment analysis on Bloomberg chats and news feeds</li>
+          </ul>
+          <div class="tl-tags"><span>Python</span><span>RAG</span><span>MCP</span><span>VectorDB</span><span>Fixed Income</span><span>PCA</span></div>
+        </div>
       </div>
-    </footer>
-  </div>
+
+      <div class="tl-item" data-reveal="up">
+        <div class="tl-dot"></div>
+        <div class="tl-card tilt-card">
+          <div class="tl-head">
+            <div>
+              <div class="tl-title">Repo Trading Developer</div>
+              <div class="tl-co">Millennium &middot; Position, PnL &amp; Risk</div>
+            </div>
+            <div class="tl-meta">
+              <div class="tl-date">Nov 2024 – Feb 2026</div>
+              <div class="tl-loc">London</div>
+            </div>
+          </div>
+          <ul class="tl-bullets">
+            <li>Led E2E development of greenfield repo automation platform as tech product owner &amp; lead developer (team of 4)</li>
+            <li>Linear programming optimisation minimising balance sheet exposure across 10K+ daily trades</li>
+            <li>Python/Java backend for ticking data from Murex, Bloomberg/ICAP/CME; React, Angular, AG Grid frontend</li>
+            <li>Architected SDLC with Docker, Kubernetes, AWS EKS; engineered MCP server &amp; AI chatbot for FICC</li>
+          </ul>
+          <div class="tl-tags"><span>Python</span><span>Java</span><span>React</span><span>AWS EKS</span><span>Kubernetes</span><span>Bloomberg</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" data-reveal="up">
+        <div class="tl-dot"></div>
+        <div class="tl-card tilt-card">
+          <div class="tl-head">
+            <div>
+              <div class="tl-title">Software Engineer</div>
+              <div class="tl-co">JPMorgan Chase &middot; CIB Front Office Macro Trading</div>
+            </div>
+            <div class="tl-meta">
+              <div class="tl-date">Sep 2023 – Nov 2024</div>
+              <div class="tl-loc">London</div>
+            </div>
+          </div>
+          <ul class="tl-bullets">
+            <li>Cross-product Macro Structuring, Pricing, Risk &amp; Trade Booking for Fixed-Income (Repo, Swaps, Credit, FX)</li>
+            <li>Full stack: Python, Java, C++ QR libs, JS/TS frontend; Agile across QR, UI, Athena, S&amp;P</li>
+            <li>"SEP Rising Star" award; on track for Early Promotion with ED approval</li>
+          </ul>
+          <div class="tl-tags"><span>Python</span><span>Java</span><span>C++</span><span>TypeScript</span><span>Fixed Income</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" data-reveal="up">
+        <div class="tl-dot"></div>
+        <div class="tl-card tilt-card">
+          <div class="tl-head">
+            <div>
+              <div class="tl-title">Software Engineer Intern</div>
+              <div class="tl-co">JPMorgan Chase &middot; London</div>
+            </div>
+            <div class="tl-meta">
+              <div class="tl-date">Jun – Aug 2022</div>
+              <div class="tl-loc">London</div>
+            </div>
+          </div>
+          <ul class="tl-bullets">
+            <li>Migrated high-volume FIF Structuring &amp; Risk app, improving stability and latency</li>
+            <li>Delivered 3 PROD-grade server-driven UI innovations (subscriptions, delta queries, layouts)</li>
+          </ul>
+          <div class="tl-tags"><span>Python</span><span>Java</span><span>Risk Systems</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" data-reveal="up">
+        <div class="tl-dot"></div>
+        <div class="tl-card tilt-card">
+          <div class="tl-head">
+            <div>
+              <div class="tl-title">UG Research Fellow &middot; AI Research</div>
+              <div class="tl-co">King's College London &middot; Dr Martim Brandao</div>
+            </div>
+            <div class="tl-meta">
+              <div class="tl-date">Jul – Sep 2021</div>
+              <div class="tl-loc">London</div>
+            </div>
+          </div>
+          <ul class="tl-bullets">
+            <li>Co-authored AI research paper on Multi-Agent Path Finding (optimization, automation, planning)</li>
+            <li>MILP algorithm computing optimal map modifications using Gurobi &amp; NetworkX</li>
+          </ul>
+          <div class="tl-tags"><span>Python</span><span>MILP</span><span>Gurobi</span><span>NumPy</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SKILLS ─────────────────────────────────────── -->
+  <section id="skills" class="section">
+    <div class="section-label" data-reveal="left">/ Skills</div>
+    <h2 class="section-title" data-reveal="up">Tech Stack</h2>
+
+    <!-- Radar Chart -->
+    <div class="radar-wrap" data-reveal="scale">
+      <canvas id="radarCanvas" width="340" height="340" aria-label="Skills radar chart"></canvas>
+    </div>
+
+    <!-- Skill tabs -->
+    <div class="skill-tabs" id="skillTabs" role="tablist">
+      <button class="skill-tab active" data-cat="all" role="tab" aria-selected="true">All</button>
+      <button class="skill-tab" data-cat="lang" role="tab">Languages</button>
+      <button class="skill-tab" data-cat="app" role="tab">App Dev</button>
+      <button class="skill-tab" data-cat="devops" role="tab">DevOps</button>
+      <button class="skill-tab" data-cat="ai" role="tab">AI / ML</button>
+      <button class="skill-tab" data-cat="quant" role="tab">Quant</button>
+      <button class="skill-tab" data-cat="data" role="tab">Data</button>
+    </div>
+
+    <div class="skill-tags-wrap" id="skillTagsWrap">
+      <span class="stag" data-cat="lang">Python</span>
+      <span class="stag" data-cat="lang">C++</span>
+      <span class="stag" data-cat="lang">Java</span>
+      <span class="stag" data-cat="lang">Scala</span>
+      <span class="stag" data-cat="lang">kdb+/q</span>
+      <span class="stag" data-cat="lang">SQL</span>
+      <span class="stag" data-cat="lang">TypeScript</span>
+      <span class="stag" data-cat="lang">MATLAB</span>
+      <span class="stag" data-cat="lang">Bash</span>
+      <span class="stag" data-cat="lang">Haskell</span>
+      <span class="stag" data-cat="app">Django</span>
+      <span class="stag" data-cat="app">Flask</span>
+      <span class="stag" data-cat="app">FastAPI</span>
+      <span class="stag" data-cat="app">Spring</span>
+      <span class="stag" data-cat="app">React</span>
+      <span class="stag" data-cat="app">Angular</span>
+      <span class="stag" data-cat="app">AG Grid</span>
+      <span class="stag" data-cat="app">GraphQL</span>
+      <span class="stag" data-cat="app">REST</span>
+      <span class="stag" data-cat="app">Kafka</span>
+      <span class="stag" data-cat="devops">AWS (EC2, EKS, S3, Lambda)</span>
+      <span class="stag" data-cat="devops">Docker</span>
+      <span class="stag" data-cat="devops">Kubernetes</span>
+      <span class="stag" data-cat="devops">Terraform</span>
+      <span class="stag" data-cat="devops">Airflow</span>
+      <span class="stag" data-cat="devops">GitHub Actions</span>
+      <span class="stag" data-cat="devops">ArgoCD</span>
+      <span class="stag" data-cat="devops">Linux</span>
+      <span class="stag" data-cat="devops">TeamCity</span>
+      <span class="stag" data-cat="ai">PyTorch</span>
+      <span class="stag" data-cat="ai">TensorFlow</span>
+      <span class="stag" data-cat="ai">Transformers</span>
+      <span class="stag" data-cat="ai">RAG</span>
+      <span class="stag" data-cat="ai">VectorDB</span>
+      <span class="stag" data-cat="ai">LangChain</span>
+      <span class="stag" data-cat="ai">FastMCP</span>
+      <span class="stag" data-cat="ai">OpenClaw</span>
+      <span class="stag" data-cat="ai">Scikit-learn</span>
+      <span class="stag" data-cat="devops">Playwright</span>
+      <span class="stag" data-cat="quant">Fixed Income</span>
+      <span class="stag" data-cat="quant">Derivatives</span>
+      <span class="stag" data-cat="quant">Bloomberg API</span>
+      <span class="stag" data-cat="quant">kdb+/q</span>
+      <span class="stag" data-cat="quant">Murex</span>
+      <span class="stag" data-cat="quant">PCA Factor Models</span>
+      <span class="stag" data-cat="quant">LP Optimisation</span>
+      <span class="stag" data-cat="quant">Gurobi</span>
+      <span class="stag" data-cat="data">PostgreSQL</span>
+      <span class="stag" data-cat="data">MongoDB</span>
+      <span class="stag" data-cat="data">Redis</span>
+      <span class="stag" data-cat="data">DuckDB</span>
+      <span class="stag" data-cat="data">NumPy</span>
+      <span class="stag" data-cat="data">Pandas</span>
+      <span class="stag" data-cat="data">Polars</span>
+      <span class="stag" data-cat="data">PyArrow</span>
+      <span class="stag" data-cat="data">Matplotlib</span>
+    </div>
+
+    <!-- Education inline -->
+    <div class="edu-strip" data-reveal="up">
+      <div class="edu-item">
+        <div class="edu-deg">BSc Computer Science &mdash; King's College London</div>
+        <div class="edu-grade">First Class Honours · 81% · 2020–2023</div>
+        <div class="edu-note">90%+ in Maths, AI, Databases, Algorithms &amp; OS</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-deg">IGCSE &amp; A-Levels &mdash; Dyatmika High School, Bali</div>
+        <div class="edu-grade">Top in Country Award (ICT) · A*AAA · 2013–2019</div>
+        <div class="edu-note">Highest Raw Mark nationally &mdash; ICT</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TERMINAL ───────────────────────────────────── -->
+  <section id="terminal-section" class="section">
+    <div class="section-label" data-reveal="left">/ Interact</div>
+    <h2 class="section-title" data-reveal="up">Terminal</h2>
+    <p class="terminal-hint" data-reveal="up">An interactive way to explore my profile. Type <code>help</code> to get started.</p>
+
+    <div class="terminal-window" data-reveal="scale">
+      <div class="terminal-bar">
+        <div class="t-dots">
+          <span class="t-dot" style="background:#EF4444"></span>
+          <span class="t-dot" style="background:#F59E0B"></span>
+          <span class="t-dot" style="background:#10B981"></span>
+        </div>
+        <span class="t-bar-title">yonathan@portfolio:~</span>
+        <button class="t-clear-btn" id="tClearBtn" title="Clear terminal">⌫</button>
+      </div>
+      <div class="terminal-body" id="terminalBody">
+        <div id="termOutput">
+          <div class="t-line"><span class="t-cmt">// Yonathan Setiawan — Interactive Portfolio Terminal</span></div>
+          <div class="t-line"><span class="t-cmt">// Type <span class="t-hl">help</span> to see all commands, or tap a shortcut below</span></div>
+          <div class="t-line t-empty"></div>
+        </div>
+        <div class="t-input-row">
+          <span class="t-prompt">yonathan@portfolio:~$&nbsp;</span>
+          <input type="text" id="termInput" class="t-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="Terminal input">
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile quick-action buttons -->
+    <div class="t-shortcuts" id="tShortcuts">
+      <button class="t-shortcut" data-cmd="help">help</button>
+      <button class="t-shortcut" data-cmd="whoami">whoami</button>
+      <button class="t-shortcut" data-cmd="skills">skills</button>
+      <button class="t-shortcut" data-cmd="experience">experience</button>
+      <button class="t-shortcut" data-cmd="contact">contact</button>
+      <button class="t-shortcut" data-cmd="sudo hire me">sudo hire me</button>
+    </div>
+  </section>
+
+  <!-- ── SERVICES ───────────────────────────────────── -->
+  <section id="services" class="section">
+    <div class="section-label" data-reveal="left">/ Services</div>
+    <h2 class="section-title" data-reveal="up">How I Can Help</h2>
+
+    <div class="svc-grid stagger">
+
+      <div class="svc-card tilt-card" data-reveal="left">
+        <div class="svc-icon">&lt;/&gt;</div>
+        <h3 class="svc-title">Freelancing</h3>
+        <p class="svc-desc">Full-stack engineering, quant development, and AI systems for financial firms, startups, and anyone with ambitious technical problems.</p>
+        <ul class="svc-list">
+          <li>Trading &amp; Risk Systems</li>
+          <li>AI / RAG / MCP Pipelines</li>
+          <li>Data Platforms &amp; Dashboards</li>
+          <li>Backtesting Frameworks</li>
+          <li>Full-Stack Web Development</li>
+          <li>Cloud Infrastructure (AWS)</li>
+        </ul>
+        <a href="#contact" class="svc-cta">Enquire &rarr;</a>
+      </div>
+
+      <div class="svc-card tilt-card" data-reveal="right">
+        <div class="svc-icon">&sum;</div>
+        <h3 class="svc-title">Tutoring</h3>
+        <p class="svc-desc">University-level CS and mathematics tutoring from a King's College London First Class Honours graduate with hands-on industry experience.</p>
+        <ul class="svc-list">
+          <li>Algorithms &amp; Data Structures</li>
+          <li>AI &amp; Machine Learning</li>
+          <li>Maths (Linear Algebra, Stats)</li>
+          <li>Python &amp; Java Programming</li>
+          <li>Database Systems</li>
+          <li>Interview &amp; Career Prep</li>
+        </ul>
+        <a href="#contact" class="svc-cta">Book Session &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CONTACT ────────────────────────────────────── -->
+  <section id="contact" class="section">
+    <div class="section-label" data-reveal="left">/ Contact</div>
+    <h2 class="section-title" data-reveal="up">Get In Touch</h2>
+    <p class="contact-sub" data-reveal="up">Open to freelance projects, tutoring enquiries, and interesting conversations. I respond quickly.</p>
+
+    <div class="contact-links stagger">
+      <a href="mailto:yonathanbali@gmail.com" class="contact-card" data-reveal="up">
+        <span class="contact-ico">✉</span>
+        <div class="contact-info">
+          <span class="contact-type">Email</span>
+          <span class="contact-val">yonathanbali@gmail.com</span>
+        </div>
+        <span class="contact-arrow">↗</span>
+      </a>
+      <a href="https://uk.linkedin.com/in/yonathanstwn" class="contact-card" target="_blank" rel="noopener" data-reveal="up">
+        <span class="contact-ico contact-ico-li">in</span>
+        <div class="contact-info">
+          <span class="contact-type">LinkedIn</span>
+          <span class="contact-val">linkedin.com/in/yonathanstwn</span>
+        </div>
+        <span class="contact-arrow">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-logo">YS</span>
+      <span class="footer-txt">Yonathan Setiawan &middot; Singapore &middot; 2026</span>
+      <span class="footer-hint">↑↑↓↓←→←→BA</span>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
-
 </html>
