@@ -134,24 +134,31 @@ document.addEventListener('DOMContentLoaded', () => {
       };
     }
 
+    window.addEventListener('resize', () => { resize(); }, { passive: true });
+    canvas.closest('#hero').addEventListener('mousemove', e => {
+      const r = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top;
+    });
+    canvas.closest('#hero').addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
+
+    let rafId;
+    let running = true;
+
     function draw() {
+      if (!running) return;
       ctx.clearRect(0, 0, W, H);
 
-      // Update
       particles.forEach(p => {
         p.x += p.vx; p.y += p.vy;
         if (p.x < 0 || p.x > W) p.vx *= -1;
         if (p.y < 0 || p.y > H) p.vy *= -1;
-        // Mouse repulsion
         const dx = p.x - mouse.x, dy = p.y - mouse.y;
         const d = Math.sqrt(dx * dx + dy * dy);
-        if (d < 80) { p.vx += dx / d * 0.3; p.vy += dy / d * 0.3; }
-        // Speed cap
+        if (d < 80 && d > 0) { p.vx += (dx / d) * 0.3; p.vy += (dy / d) * 0.3; }
         const spd = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
         if (spd > 1.5) { p.vx /= spd; p.vy /= spd; }
       });
 
-      // Connections
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -169,7 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      // Dots
       particles.forEach(p => {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
@@ -177,15 +183,13 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.fill();
       });
 
-      requestAnimationFrame(draw);
+      rafId = requestAnimationFrame(draw);
     }
 
-    window.addEventListener('resize', () => { resize(); }, { passive: true });
-    canvas.closest('#hero').addEventListener('mousemove', e => {
-      const r = canvas.getBoundingClientRect();
-      mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top;
+    document.addEventListener('visibilitychange', () => {
+      running = !document.hidden;
+      if (running) draw();
     });
-    canvas.closest('#hero').addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
 
     resize();
     draw();
@@ -584,7 +588,7 @@ Currently @ Millennium, Singapore.
     }
 
     function scrollBottom() {
-      body.scrollTop = body.scrollHeight;
+      output.scrollTop = output.scrollHeight;
     }
 
     function escapeHtml(s) {
